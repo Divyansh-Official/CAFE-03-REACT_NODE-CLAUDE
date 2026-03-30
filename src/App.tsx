@@ -23,8 +23,8 @@ import CheckoutPage      from './pages/user/CheckoutPage';
 import OrderTrackingPage from './pages/user/OrderTrackingPage';
 import ProfilePage       from './pages/user/ProfilePage';
 // import GalleryPage       from '../pages/user/GalleryPage';
-// import SettingsPage      from './pages/user/SettingsPage';
-// import OrderHistoryPage  from './pages/user/OrderHistoryPage';
+import SettingsPage      from './pages/user/SettingsPage';
+import OrderHistoryPage  from './pages/user/OrderHistoryPage';
 
 // Admin pages
 import { AdminLoginPage, AdminDashboardPage }    from './pages/admin/AdminPages';
@@ -40,6 +40,7 @@ import {
 
 // Guards
 import { RouteGuard } from './utils/routeGuard';
+import GalleryPage from './pages/user/GalleryPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -89,8 +90,8 @@ const AppInner: React.FC = () => {
           <Route path="/menu" element={<><MenuPage /><Footer /></>} />
           <Route path="/menu/:categorySlug" element={<><CategoryPage /><Footer /></>} />
           <Route path="/menu/:categorySlug/:itemId" element={<><ItemPage /><Footer /></>} />
-          {/* <Route path="/gallery" element={<><GalleryPage /><Footer /></>} /> */}
-          {/* <Route path="/settings" element={<><SettingsPage /><Footer /></>} /> */}
+          <Route path="/gallery" element={<><GalleryPage /><Footer /></>} />
+          <Route path="/settings" element={<><SettingsPage /><Footer /></>} />
 
           <Route path="/cart" element={<CartPage />} />
 
@@ -100,7 +101,7 @@ const AppInner: React.FC = () => {
             </RouteGuard>
           } />
 
-          {/* <Route path="/orders" element={<><OrderHistoryPage /><Footer /></>} /> */}
+          <Route path="/orders" element={<><OrderHistoryPage /><Footer /></>} />
           <Route path="/orders/:orderId" element={<><OrderTrackingPage /></>} />
 
           <Route path="/profile" element={

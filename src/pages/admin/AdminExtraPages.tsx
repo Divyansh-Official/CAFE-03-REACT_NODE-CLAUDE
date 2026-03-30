@@ -6,7 +6,7 @@ import { adminService } from '../../services/allServices';
 import type { Offer } from '../../types/offer.types';
 import toast from 'react-hot-toast';
 import icons from '../../data/icons.json';
-import { CategoryPieChart, DailyOrdersChart, PeakHoursHeatmap, SalesChart } from './SalesChart';
+import { CategoryPieChart, DailyOrdersChart, PeakHoursHeatmap, SalesChart } from '../../components/admin/SalesChart';
 
 // ══════════════════════════════════════════════════════════════
 // ADMIN OFFERS PAGE
